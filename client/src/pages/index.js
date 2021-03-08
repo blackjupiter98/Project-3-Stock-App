@@ -19,20 +19,21 @@ const IndexPage = () => {
     // fetches stock data based on parameters
     const fetchData = (e) => {
         e.preventDefault()
+
         setMessage('Loading...')
 
         api.stockTimeSeries(ticker)
-
         .then((response)=>{
-           setResponseData(response.data)
-           setMessage('')
-           console.log(response)
+            setResponseData(response.data)
+            setMessage('')
+            console.log(response)
         })
         .catch((error) => {
-           setMessage('Error')
-           console.log(error)
+            setMessage('Error')
+            console.log(error)
         })
     }
+
 
     return (
         <div
@@ -47,7 +48,7 @@ const IndexPage = () => {
                     color: 'white',
                     padding: '1rem',
                     display: 'inline-block'
-                }}>STONKS Stock Market App</h1>
+                }}>Gatsby Stock Market App</h1>
             <h2>Analyze Stock Data</h2>
             <form onSubmit={fetchData}>
                 <fieldset>
@@ -74,16 +75,15 @@ const IndexPage = () => {
                 width={900}
                 height={500}
                 data={responseData.closePrices}
-                margin={{ top:50, right:20, left:10, bottom:5 }}
-            >
+                margin={{ top: 50, right: 20, left: 10, bottom: 5 }}
+                >
                 <YAxis tickCount={10} type="number" width={80}>
-                    <Label value="Close Price" position="insideLeft" angle={270}/>
+                    <Label value="Close Price" position="insideLeft" angle={270} />
                 </YAxis>
                 <Tooltip />
-                <XAxis padding={{left:5, right:5}} tickCount={10} angle={-60} height={90} dataKey="date" />
+                <XAxis padding={{left: 5, right: 5}} tickCount={10} angle={-60} height={90} dataKey="date" />
                 <CartesianGrid stroke="#f5f5f5" />
                 <Line type="monotone" dataKey="close" stroke="blue" yAxisId={0} />
-
             </LineChart>
         </div>
     )
