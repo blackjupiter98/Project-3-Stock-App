@@ -40,7 +40,7 @@ const IndexPage = () => {
                 color: 'white',
                 padding: '1rem',
                 display: 'inline-block'
-            }}>Gatsby Stock Market App</h1>
+            }}>Stonks Stock Market App</h1>
         <h2>Analyze Stock Data</h2>
         <form onSubmit={fetchData}>
             <fieldset>
