@@ -82,7 +82,7 @@ const IndexPage = () => {
                 <Tooltip />
                 <XAxis padding={{left:5, right:5}} tickCount={10} angle={-60} height={90} dataKey="date" />
                 <CartesianGrid stroke="#f5f5f5" />
-                <Line type="monotone" dataKey="close" stroke="ff7300" yAxisId={0} />
+                <Line type="monotone" dataKey="close" stroke="blue" yAxisId={0} />
 
             </LineChart>
         </div>
