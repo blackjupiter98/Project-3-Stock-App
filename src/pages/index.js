@@ -59,7 +59,7 @@ const IndexPage = () => {
                             name="ticker"
                             id="ticker"
                             type='text'
-                            placeholder='SPY'
+                            placeholder='XYZ'
                             value={ticker}
                             onChange={(e) => setTicker(e.target.value)}
                         />
