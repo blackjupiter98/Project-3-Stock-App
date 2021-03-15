@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-    baseURL: 'https://alpha-vantage.p.rapidapi.com',
+    baseURL: 'https://alpha-vantage.p.rapidapi.com/',
     headers: {
         'content-type':'application/octet-stream',
         'x-rapidapi-host':'alpha-vantage.p.rapidapi.com',
@@ -22,7 +22,7 @@ export default {
         },
         transformResponse: [function (data) {
             // Do whatever you want to transform the data
-            console.log('Transforming data...')
+            console.log('Transforming data')
     
             const json = JSON.parse(data)
     
