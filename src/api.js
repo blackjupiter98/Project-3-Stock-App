@@ -13,7 +13,7 @@ export default {
     stockTimeSeries: (symbol) =>
     instance({
         'method':'GET',
-        'url':'/query',
+        'url':'query',
         'params': {
             'outputsize':'compact',
             'datatype':'json',
