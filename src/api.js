@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-    baseURL: 'https://alpha-vantage.p.rapidapi.com/',
+    baseURL: 'https://alpha-vantage.p.rapidapi.com/query',
     headers: {
         'content-type':'application/octet-stream',
         'x-rapidapi-host':'alpha-vantage.p.rapidapi.com',
@@ -13,7 +13,6 @@ export default {
     stockTimeSeries: (symbol) =>
     instance({
         'method':'GET',
-        'url':'query',
         'params': {
             'outputsize':'compact',
             'datatype':'json',
